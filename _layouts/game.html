@@ -1,0 +1,34 @@
+---
+layout: default
+main_class: game
+---
+{% assign game = site.data.games | where: "slug", page.game | first %}
+<section class="game-hero">
+  {% if game.feature %}<img class="feature" src="{{ game.feature | relative_url }}" alt="{{ game.name }}">{% endif %}
+  <div class="game-title">
+    {% if game.icon %}<img class="icon" src="{{ game.icon | relative_url }}" alt="" width="96" height="96">{% endif %}
+    <div>
+      <h1>{{ game.name }}</h1>
+      <p class="tagline">{{ game.tagline }}</p>
+    </div>
+  </div>
+  <p class="cta">
+    {% if game.play_url and game.play_url != "" %}
+      <a class="button" href="{{ game.play_url }}">Descargar en Google Play</a>
+    {% else %}
+      <span class="badge">{{ game.status | default: "Próximamente" }}</span>
+    {% endif %}
+  </p>
+</section>
+
+<section class="game-body">
+  {{ content }}
+</section>
+
+{% if page.screenshots %}
+<section class="screenshots">
+  {% for s in page.screenshots %}<img src="{{ s | relative_url }}" alt="Captura de {{ game.name }}" loading="lazy">{% endfor %}
+</section>
+{% endif %}
+
+<p class="game-links"><a href="{{ '/' | append: game.slug | append: '/privacy/' | relative_url }}">Política de privacidad</a></p>

@@ -1,0 +1,13 @@
+# Sitio de los juegos de Christian Di Guardia (GitHub Pages + Jekyll).
+# Para sumar un juego: ver README.md.
+title: Christian Di Guardia — Juegos
+description: Juegos para Android hechos en Argentina.
+author: Christian Di Guardia
+email: cguardia@gmail.com
+lang: es
+url: "https://diguardia.github.io"
+baseurl: ""
+markdown: kramdown
+exclude:
+  - README.md
+  - templates/

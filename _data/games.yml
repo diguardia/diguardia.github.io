@@ -1,0 +1,12 @@
+# Un bloque por juego. El orden es el de la portada.
+# slug: carpeta del juego (y su URL: /<slug>/).
+# play_url: enlace de Google Play cuando esté publicado (vacío = "Próximamente").
+- slug: los-cocos-tycoon
+  name: Los Cocos Tycoon
+  tagline: Armá el centro recreativo de un pueblo serrano.
+  status: En desarrollo
+  platforms: [Android]
+  package: com.loscocos.tycoon
+  icon: /los-cocos-tycoon/img/icon.png
+  feature: /los-cocos-tycoon/img/feature.png
+  play_url: ""

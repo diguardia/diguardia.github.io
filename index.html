@@ -1,0 +1,21 @@
+---
+layout: default
+main_class: home
+---
+<section class="intro">
+  <h1>Juegos</h1>
+  <p>{{ site.description }}</p>
+</section>
+
+<section class="games">
+  {% for game in site.data.games %}
+  <a class="card" href="{{ '/' | append: game.slug | append: '/' | relative_url }}">
+    {% if game.icon %}<img src="{{ game.icon | relative_url }}" alt="" width="72" height="72">{% endif %}
+    <div>
+      <h2>{{ game.name }}</h2>
+      <p>{{ game.tagline }}</p>
+      <span class="badge">{% if game.play_url and game.play_url != "" %}En Google Play{% else %}{{ game.status | default: "Próximamente" }}{% endif %}</span>
+    </div>
+  </a>
+  {% endfor %}
+</section>
