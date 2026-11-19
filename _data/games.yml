@@ -10,3 +10,12 @@
   icon: /los-cocos-tycoon/img/icon.png
   feature: /los-cocos-tycoon/img/feature.png
   play_url: ""
+- slug: pickup-and-delivery
+  name: Reparto Express
+  tagline: Juntá los paquetes y llevalos a cada oficina antes de quedarte sin nafta.
+  status: Volviendo a Google Play
+  platforms: [Android]
+  package: com.cguardia.pickupanddelivery
+  icon: /pickup-and-delivery/img/icon.png
+  feature: /pickup-and-delivery/img/feature.png
+  play_url: ""
